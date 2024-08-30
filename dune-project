@@ -49,6 +49,16 @@
   (trace tracing catapult TEF chrome-format)))
 
 (package
+ (name trace-runtime-events)
+ (synopsis "Runtime-events based ring-buffer tracer")
+ (depends
+   (ocaml (>= 5.0))
+   (trace (= :version))
+   dune)
+ (tags
+  (trace tracing catapult TEF chrome-format)))
+
+(package
  (name trace-fuchsia)
  (synopsis "A high-performance backend for trace, emitting a Fuchsia trace into a file")
  (depends

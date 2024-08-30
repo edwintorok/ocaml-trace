@@ -5,6 +5,11 @@
   (libraries trace.core trace-tef))
 
 (executable
+  (name trace2)
+  (modules trace2)
+  (libraries trace.core trace-runtime-events))
+
+(executable
   (name trace_fx)
   (modules trace_fx)
   (preprocess (pps ppx_trace))

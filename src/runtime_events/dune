@@ -1,0 +1,5 @@
+(library
+  (name trace_runtime_events)
+  (public_name trace-runtime-events)
+  (synopsis "Runtime-events based ring-buffer tracer")
+  (libraries trace.core runtime_events))

@@ -36,7 +36,6 @@ let () =
   in
 
   let samples = B.throughput1 4 ~name:"encode_1_span" (encode_1_span out) () in
-  B.print_gc samples;
 
   let [ (_, samples) ] = samples [@@warning "-8"] in
 
@@ -53,6 +52,5 @@ let () =
       ()
   in
 
-  let samples = B.throughput1 4 ~name:"encode_3_span" (encode_3_span out) () in
-  B.print_gc samples;
+  let _samples = B.throughput1 4 ~name:"encode_3_span" (encode_3_span out) () in
   ()
