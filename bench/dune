@@ -10,6 +10,11 @@
   (libraries trace.core trace-runtime-events))
 
 (executable
+  (name trace3)
+  (modules trace3)
+  (libraries trace.core opentelemetry.trace opentelemetry-client-ocurl ambient-context.unix))
+
+(executable
   (name trace_fx)
   (modules trace_fx)
   (preprocess (pps ppx_trace))
